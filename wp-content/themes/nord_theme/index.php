@@ -17,9 +17,10 @@
   </section>
   <section class="flex justify-center items-center px-5">
     <div class="flex flex-col items-center container py-20 md:py-40 gap-10 md:gap-20">
-      <div class="flex flex-col justify-between max-w-4xl md:flex-row gap-5 md:gap-10 text-center md:text-left">
+      <div class="flex flex-col justify-between items-center md:flex-row gap-5 md:gap-10 text-center md:text-left">
         <h2 class="md:basis-1/2 text-3xl md:text-6xl font-semibold">We're a full-service Web agency</h2>
-        <p class="md:basis-1/2 text-lg md:text-xl">From conducting researches of your competitors, designing templates,
+        <p class="md:basis-1/2 text-lg md:text-xl text-gray-500">From conducting researches of your competitors,
+          designing templates,
           and
           developing
           adaptive
