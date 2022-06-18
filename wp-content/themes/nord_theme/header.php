@@ -11,9 +11,9 @@
 
 <body class="flex flex-col min-h-screen text-base bg-gray-100 text-gray-900">
   <header class="flex justify-center">
-    <div class="container flex justify-between items-center py-3 px-5 md:py-5 gap-10">
-      <a href="/">
-        <img src="/wp-content/themes/nord_theme/assets/images/logo_full.svg" class="block h-10 w-auto" alt="logo" />
+    <div class="container flex justify-between items-center py-3 px-5 md:py-3 gap-5">
+      <a href="./">
+        <img src="wp-content/themes/nord_theme/assets/images/logo_full.svg" class="h-10 w-auto" height="40" alt="logo" />
       </a>
       <?php $outline = true;
       include("assets/components/button.php") ?>
