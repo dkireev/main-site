@@ -3,6 +3,7 @@
     <p class="text-center">2021-2022 &copy; Nord Softworks</p>
   </div>
 </footer>
+<?php wp_footer() ?>
 </body>
 
 </html>
