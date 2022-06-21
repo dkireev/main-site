@@ -84,8 +84,8 @@
         <div class="swiper-wrapper w-full">
           <div class="swiper-slide">
             <div class="grid gap-2">
-              <div class="h-60 lg:h-80 rounded-lg overflow-hidden">
-                <div class="h-full bg-no-repeat bg-cover bg-center hover:scale-105 transition-transform"
+              <div class="h-60 lg:h-80 rounded-lg border border-gray-200 overflow-hidden">
+                <div class="h-full bg-no-repeat bg-cover bg-center md:hover:scale-105 transition-transform"
                   style="background-image: url('wp-content/uploads/2022/06/portfolio_1.png')">
                 </div>
               </div>
@@ -94,8 +94,8 @@
           </div>
           <div class="swiper-slide">
             <div class="grid gap-2">
-              <div class="h-60 lg:h-80 rounded-lg overflow-hidden">
-                <div class="h-full bg-no-repeat bg-cover bg-center hover:scale-105 transition-transform"
+              <div class="h-60 lg:h-80 rounded-lg border border-gray-200 overflow-hidden">
+                <div class="h-full bg-no-repeat bg-cover bg-center md:hover:scale-105 transition-transform"
                   style="background-image: url('wp-content/uploads/2022/06/portfolio_3.png')">
                 </div>
               </div>
@@ -104,8 +104,8 @@
           </div>
           <div class="swiper-slide">
             <div class="grid gap-2">
-              <div class="h-60 lg:h-80 rounded-lg overflow-hidden">
-                <div class="h-full bg-no-repeat bg-cover bg-center hover:scale-105 transition-transform"
+              <div class="h-60 lg:h-80 rounded-lg border border-gray-200 overflow-hidden">
+                <div class="h-full bg-no-repeat bg-cover bg-center md:hover:scale-105 transition-transform"
                   style="background-image: url('wp-content/uploads/2022/06/portfolio_2.png')">
                 </div>
               </div>
