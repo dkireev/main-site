@@ -8,9 +8,9 @@
   <?php wp_head() ?>
 </head>
 
-<body class="flex flex-col min-h-screen text-base bg-gray-100 text-gray-900">
-  <header class="flex justify-center">
-    <div class="container flex justify-between items-center py-3 px-5 md:py-3 gap-5">
+<body class="flex flex-col min-h-screen text-base bg-white text-gray-900">
+  <header class="flex justify-center px-5">
+    <div class="container flex justify-between items-center py-3 md:py-3 gap-5">
       <a href="/">
         <?php
         if (function_exists('the_custom_logo')) {
