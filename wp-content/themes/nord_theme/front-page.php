@@ -1,69 +1,62 @@
 <?php get_header(); ?>
-<!-- <?php
-      if (have_posts()) {
-        while (have_posts()) {
-          the_post();
-          the_content();
-        }
-      }
-      ?> -->
 <section class="flex justify-center items-center mt-[4.375rem] px-5">
   <div class="container flex flex-col-reverse lg:flex-row lg:items-center py-10 lg:py-20 2xl:py-40 gap-10">
     <div class="flex basis-1/2 flex-col gap-10 lg:gap-20 md:items-center lg:items-start">
       <div class="flex flex-col gap-5 md:gap-10 items-center lg:items-start">
-        <h1 class="text-4xl md:text-7xl max-w-xl lg:max-w-full font-semibold text-center lg:text-start">We
-          create custom Landing
-          Pages
+        <h1 class="text-4xl md:text-7xl max-w-xl lg:max-w-full font-semibold text-center lg:text-start">
+          <?php the_field('banner_title') ?>
         </h1>
-        <p class="hidden md:block text-center lg:text-start text-lg md:text-xl max-w-md">Driven and ambitious Nord
-          Softworks team produce
-          customized Landing
-          Pages that
-          captivate
-          users and compel them to take actions</p>
+        <p class="hidden md:block text-center lg:text-start text-lg md:text-xl max-w-md">
+          <?php the_field('banner_description') ?>
+        </p>
       </div>
       <?php include("assets/components/button.php") ?>
     </div>
-    <!-- <div class="basis-1/2 w-full bg-contain bg-no-repeat bg-center" style="background-image: url('/wp-content/uploads/2022/06/hero.png')"></div> -->
     <img class="w-full lg:max-w-xl xl:max-w-[45.5rem]" src="/wp-content/uploads/2022/06/hero.png" />
   </div>
 </section>
 <section class="flex justify-center items-center px-5 bg-gray-50">
   <div class="flex flex-col items-center container py-10 lg:py-20 2xl:py-40 gap-10 md:gap-20">
     <div class="flex flex-col justify-between md:flex-row gap-5 md:gap-10 text-center md:text-left">
-      <h2 class="md:basis-1/2 text-3xl md:text-6xl font-semibold">We're a full-service Web agency</h2>
-      <p class="md:basis-1/2 text-lg md:text-xl text-gray-500">From conducting researches of your competitors,
-        designing templates,
-        and
-        developing
-        adaptive
-        Landing
-        Pages to empowering your digital presence, we do it all</p>
+      <h2 class="md:basis-1/2 text-3xl md:text-6xl font-semibold">
+        <?php the_field('services_title') ?>
+      </h2>
+      <p class="md:basis-1/2 text-lg md:text-xl text-gray-500">
+        <?php the_field('services_description') ?>
+      </p>
     </div>
     <div class="flex flex-col md:flex-row gap-10 lg:gap-20">
       <div class="flex basis-1/3 flex-col items-center gap-5 md:gap-10">
-        <img src="wp-content/themes/nord_theme/assets/images/designing.png" class="h-32 w-32" height="128"
-          alt="desiging" />
+        <img src="wp-content/themes/nord_theme/assets/images/designing.png" class="h-32 w-32" height="128" alt="desiging" />
         <div class="flex flex-col items-center gap-3 md:gap-5">
-          <h3 class="text-2xl md:text-4xl font-semibold">Web design</h3>
-          <p class="text-center max-w-md">Making high fidelity Figma designs, that attract customers and increase
-            engagement
+          <h3 class="text-2xl md:text-4xl font-semibold">
+            <?php the_field('service_title_1') ?>
+          </h3>
+          <p class="text-center max-w-md">
+            <?php the_field('service_description_1') ?>
           </p>
         </div>
       </div>
       <div class="flex basis-1/3 flex-col items-center gap-5 md:gap-10">
         <img src="wp-content/themes/nord_theme/assets/images/coding.png" class="h-32 w-32" height="128" alt="coding" />
         <div class="flex flex-col items-center gap-3 md:gap-5">
-          <h3 class="text-2xl md:text-4xl font-semibold">Development</h3>
-          <p class="text-center max-w-md">Producing Landing Pages that adjust seamlessly to various user devices</p>
+          <h3 class="text-2xl md:text-4xl font-semibold">
+            <?php the_field('service_title_2') ?>
+          </h3>
+          <p class="text-center max-w-md">
+            <?php the_field('service_description_2') ?>
+          </p>
         </div>
       </div>
       <div class="flex basis-1/3 flex-col items-center gap-5 md:gap-10">
-        <img src="wp-content/themes/nord_theme/assets/images/hosting.png" class="h-32 w-32" height="128"
-          alt="hosting" />
+        <img src="wp-content/themes/nord_theme/assets/images/hosting.png" class="h-32 w-32" height="128" alt="hosting" />
         <div class="flex flex-col items-center gap-3 md:gap-5">
-          <h3 class="text-2xl md:text-4xl font-semibold">Hosting</h3>
-          <p class="text-center max-w-md">Hosting client's Landing Pages on the US based servers</p>
+          <h3 class="text-2xl md:text-4xl font-semibold">
+            <?php the_field('service_title_3') ?>
+          </h3>
+          <p class="text-center max-w-md">
+            <?php the_field('service_description_3') ?>
+          </p>
         </div>
       </div>
     </div>
@@ -72,32 +65,31 @@
 <section class="flex justify-center items-center px-5">
   <div class="flex flex-col md:items-center container py-10 lg:py-20 2xl:py-40 gap-10 md:gap-20">
     <div class="flex flex-col justify-between md:flex-row gap-5 md:gap-10 text-center md:text-left">
-      <h2 class="md:basis-1/2 text-3xl md:text-6xl font-semibold">Our latest completed projects</h2>
-      <p class="md:basis-1/2 text-lg md:text-xl text-gray-500">We are keen on projects that make us think out of the
-        box. We're passionate
-        about
-        mindful websites that tell a story</p>
+      <h2 class="md:basis-1/2 text-3xl md:text-6xl font-semibold">
+        <?php the_field('projects_title') ?>
+      </h2>
+      <p class="md:basis-1/2 text-lg md:text-xl text-gray-500">
+        <?php the_field('projects_description') ?>
+      </p>
     </div>
     <div class="swiper w-full">
       <div class="swiper-wrapper w-full">
         <?php
         $dk_get_posts = new WP_Query(array('post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => -1));
         if ($dk_get_posts->have_posts()) : ?>
-        <?php while ($dk_get_posts->have_posts()) : $dk_get_posts->the_post(); ?>
-        <div class="swiper-slide">
-          <div class="grid gap-2">
-            <div class="h-60 lg:h-80 rounded-lg border border-gray-200 overflow-hidden">
-              <div class="h-full bg-no-repeat bg-cover bg-center md:hover:scale-105 transition-transform"
-                style="background-image: url('<?php the_post_thumbnail_url(); ?>')">
+          <?php while ($dk_get_posts->have_posts()) : $dk_get_posts->the_post(); ?>
+            <div class="swiper-slide">
+              <div class="grid gap-2">
+                <div class="h-60 lg:h-80 rounded-lg border border-gray-200 overflow-hidden">
+                  <div class="h-full bg-no-repeat bg-cover bg-center md:hover:scale-105 transition-transform" style="background-image: url('<?php the_post_thumbnail_url(); ?>')">
+                  </div>
+                </div>
+                <p class="text-2xl mb-6 font-semibold"><?php the_title(); ?></p>
               </div>
             </div>
-            <p class="text-2xl mb-6 font-semibold"><?php the_title(); ?></p>
-          </div>
-        </div>
-        <?php endwhile; ?>
+          <?php endwhile; ?>
         <?php wp_reset_postdata();
         endif; ?>
-
       </div>
       <div class="swiper-pagination" style="bottom: 0"></div>
     </div>
