@@ -20,7 +20,7 @@
 </head>
 
 <body class="flex flex-col min-h-screen text-base bg-white text-gray-900">
-  <header class="flex justify-center px-5">
+  <header class="flex fixed z-10 w-full justify-center px-5 bg-white shadow">
     <div class="container flex justify-between items-center py-3 md:py-3 gap-5">
       <a href="/">
         <?php
@@ -35,3 +35,4 @@
       include("assets/components/button.php") ?>
     </div>
   </header>
+  <main class="flex flex-col grow">
