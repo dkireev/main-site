@@ -9,13 +9,13 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JV4KBGPMH"></script>
   <script>
-  window.dataLayer = window.dataLayer || [];
+    window.dataLayer = window.dataLayer || [];
 
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag('js', new Date());
-  gtag('config', 'G-1JV4KBGPMH');
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-1JV4KBGPMH');
   </script>
 </head>
 
@@ -29,7 +29,7 @@
           $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
         }
         ?>
-        <img src="<?php echo $logo[0] ?>" class="h-10 w-auto" height="40" alt="logo" />
+        <img src="<?php echo $logo[0] ?>" class="h-10 w-auto" width="143" height="40" alt="logo" />
       </a>
       <?php $outline = true;
       include("assets/components/button.php") ?>
