@@ -12,7 +12,7 @@
       </div>
       <?php include("assets/components/button.php") ?>
     </div>
-    <img class="w-full lg:max-w-xl xl:max-w-[45.5rem]" src="<?php the_field('banner_image') ?>" alt="<?php the_field('banner_title') ?>" />
+    <img width="335" height="264" class="w-full lg:max-w-xl xl:max-w-[45.5rem]" src="<?php the_field('banner_image') ?>" alt="<?php the_field('banner_title') ?>" />
   </div>
 </section>
 <section class="flex justify-center items-center px-5 bg-gray-50">
@@ -30,7 +30,7 @@
       $i = 1;
       while ($i <= 3) { ?>
         <div class="flex basis-1/3 flex-col items-center gap-5 md:gap-10">
-          <img class="h-32 w-32" height="128" src="<?php the_field("service_image_$i") ?>" alt="<?php the_field("service_title_$i") ?>" />
+          <img width="128" height="128" class="w-32" src="<?php the_field("service_image_$i") ?>" alt="<?php the_field("service_title_$i") ?>" />
           <div class="flex flex-col items-center gap-3 md:gap-5">
             <h3 class="text-2xl md:text-4xl font-semibold">
               <?php the_field("service_title_$i") ?>
@@ -94,7 +94,7 @@
       <p class="md:basis-1/2">
         <?php the_field('about_text'); ?>
       </p>
-      <img class="md:basis-1/2" src="<?php the_field('about_image') ?>" alt="<?php the_field('about_title') ?>">
+      <img class="md:basis-1/2" src="<?php the_field('about_image') ?>" alt="<?php the_field('about_title') ?>" />
     </div>
   </div>
 </section>
