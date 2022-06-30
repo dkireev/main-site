@@ -21,7 +21,7 @@
         <img width="143" height="40" class="h-10 w-auto" src="<?php echo $logo[0] ?>" alt="logo" />
       </a>
       <?php $outline = true;
-      include("assets/components/button.php") ?>
+      include(get_theme_file_path() . "/includes/components/button.php") ?>
     </div>
   </header>
   <main class="flex flex-col grow">
