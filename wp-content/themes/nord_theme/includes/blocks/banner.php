@@ -11,6 +11,6 @@
       </div>
       <?php include(get_theme_file_path() . "/includes/components/button.php") ?>
     </div>
-    <img width="335" height="264" class="w-full lg:max-w-xl xl:max-w-[45.5rem]" src="<?php the_field('banner_image') ?>" alt="<?php the_field('banner_title') ?>" />
+    <img width="335" height="264" class="w-full lg:w-1/2 max-w-[45.5rem]" src="<?php the_field('banner_image') ?>" alt="<?php the_field('banner_title') ?>" />
   </div>
 </section>

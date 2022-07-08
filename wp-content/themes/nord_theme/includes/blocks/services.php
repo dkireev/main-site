@@ -1,10 +1,10 @@
 <section class="flex justify-center items-center px-5 bg-gray-50">
   <div class="flex flex-col items-center container py-10 lg:py-20 2xl:py-40 gap-10 md:gap-20">
-    <div class="max-w-7xl flex flex-col justify-between md:flex-row gap-5 md:gap-10 2xl:gap-20 text-center md:text-left">
-      <h2 class="md:basis-1/2 text-3xl md:text-6xl font-semibold">
+    <div class="max-w-7xl flex flex-col items-center justify-between md:flex-row gap-5 md:gap-10 2xl:gap-20 text-center md:text-left">
+      <h2 class="md:basis-1/2 text-3xl md:text-6xl text-center md:text-right font-semibold">
         <?php the_field('services_title') ?>
       </h2>
-      <p class="md:basis-1/2 text-lg md:text-xl text-gray-500">
+      <p class="md:basis-1/2 text-lg md:text-xl text-center md:text-left text-gray-500">
         <?php the_field('services_description') ?>
       </p>
     </div>

@@ -4,4 +4,5 @@
 <?php include(get_theme_file_path() . "/includes/blocks/portfolio.php") ?>
 <?php include(get_theme_file_path() . "/includes/blocks/about.php") ?>
 <?php include(get_theme_file_path() . "/includes/blocks/testimonials.php") ?>
+<?php include(get_theme_file_path() . "/includes/blocks/benefits.php") ?>
 <?php get_footer(); ?>
