@@ -1,4 +1,10 @@
-const swiper = new Swiper(".swiper-general", {
+import Swiper, { Pagination, Autoplay } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+
+export const swiper = new Swiper(".swiper-general", {
+  modules: [Pagination, Autoplay],
   speed: 400,
   spaceBetween: 16,
   slidesPerView: 1,
@@ -15,7 +21,8 @@ const swiper = new Swiper(".swiper-general", {
   centerInsufficientSlides: true,
 });
 
-const swiperTestimonials = new Swiper(".swiper-testimonials", {
+export const swiperTestimonials = new Swiper(".swiper-testimonials", {
+  modules: [Pagination, Autoplay],
   speed: 400,
   spaceBetween: 16,
   slidesPerView: 1,
