@@ -17,7 +17,7 @@
             <div class="swiper-slide">
               <div class="flex flex-col gap-2 mb-5 md:mb-10 2xl:mb-20">
                 <div class="h-60 lg:h-80 rounded-lg box-content border border-gray-200 overflow-hidden">
-                  <div class="h-full bg-no-repeat bg-cover bg-center md:hover:scale-105 transition-transform" style="background-image: url('<?php the_post_thumbnail_url(); ?>')">
+                  <div class="lazy h-full bg-no-repeat bg-cover bg-center md:hover:scale-105 transition-transform" data-bg="<?php the_post_thumbnail_url(); ?>">
                   </div>
                 </div>
                 <p class="text-center md:text-start text-2xl font-semibold">

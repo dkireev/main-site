@@ -9,7 +9,7 @@
       </p>
     </div>
     <div class="flex flex-col lg:flex-row items-center gap-10 md:gap-20">
-      <img width="335" height="253" class="w-full lg:w-1/2 lg:basis-1/2 max-w-[45.5rem]" src="<?php the_field('benefits_image') ?>" alt="<?php the_field('benefits_title') ?>" />
+      <img width="335" height="253" class="lazy w-full lg:w-1/2 lg:basis-1/2 max-w-[45.5rem]" data-src="<?php the_field('benefits_image') ?>" alt="<?php the_field('benefits_title') ?>" />
       <div class="flex grow flex-col md:basis-1/2 gap-10 lg:gap-20">
         <?php
         $dk_get_posts = new WP_Query(array('post_type' => 'post', 'post_status' => 'publish', 'category_name' => 'benefits', 'posts_per_page' => -1));

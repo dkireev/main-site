@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "tailwind": "npx tailwindcss -i wp-content/themes/nord_theme/assets/src/tailwind.css -o wp-content/themes/nord_theme/assets/dist/main.css --watch --minify",
+    "tailwind": "npx tailwindcss -i tailwind.css -o ../assets/main.css --watch --minify",
     "webpack": "npx webpack --watch",
     "watch": "npm run tailwind & npm run webpack"
   },
@@ -8,7 +8,8 @@
   "description": "My webpack project",
   "name": "my-webpack-project",
   "dependencies": {
-    "swiper": "^8.3.0"
+    "swiper": "^8.3.0",
+    "vanilla-lazyload": "^17.8.2"
   },
   "devDependencies": {
     "css-loader": "^6.7.1",

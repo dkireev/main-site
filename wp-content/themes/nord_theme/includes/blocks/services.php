@@ -14,7 +14,7 @@
       if ($dk_get_posts->have_posts()) : ?>
         <?php while ($dk_get_posts->have_posts()) : $dk_get_posts->the_post(); ?>
           <div class="flex basis-1/3 flex-col items-center gap-5 md:gap-10">
-            <img width="128" height="128" class="w-32" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" />
+            <img width="128" height="128" class="lazy w-32" data-src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" />
             <div class="flex flex-col items-center gap-3 md:gap-5">
               <h3 class="text-2xl md:text-4xl font-semibold">
                 <?php the_title(); ?>

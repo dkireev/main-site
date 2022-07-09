@@ -7,20 +7,27 @@ function dk_add_theme_support()
 }
 add_action('after_setup_theme', 'dk_add_theme_support');
 
-function dk_register_styles()
+$version = wp_get_theme()->get('Version');
+
+function dk_register_styles($version)
 {
-  $version = wp_get_theme()->get('Version');
   wp_enqueue_style('dk-general', get_template_directory_uri() . "/style.css", array(), $version, 'all');
-  wp_enqueue_style('dk-main', get_template_directory_uri() . "/assets/dist/main.css", array(), $version, 'all');
+  wp_enqueue_style('dk-main', get_template_directory_uri() . "/assets/main.css", array(), $version, 'all');
+  wp_enqueue_style('dk-swiper', "https://unpkg.com/swiper@8/swiper-bundle.min.css", array(), null, 'all');
 }
 add_action('wp_enqueue_scripts', 'dk_register_styles');
 
-function dk_register_scripts()
+function dk_register_scripts($version)
 {
-  $version = wp_get_theme()->get('Version');
-  wp_enqueue_script('dk-main', get_template_directory_uri() . "/assets/dist/main.js", array(), $version, true);
+  wp_enqueue_script('dk-main', get_template_directory_uri() . "/assets/main.js", array(), $version, true);
 }
 add_action('wp_enqueue_scripts', 'dk_register_scripts');
+
+function dk_remove_block_library()
+{
+  wp_dequeue_style("wp-block-library");
+}
+add_action('wp_enqueue_scripts', 'dk_remove_block_library');
 ?>
 
 <?php

@@ -4,10 +4,10 @@
     <p class="text-center"><?php the_field('footer_copyright'); ?></p>
     <div class="flex gap-2">
       <a class="opacity-50 hover:opacity-100 transition-opacity" href="<?php the_field('facebook_link'); ?>" target="_blank" rel="noreferrer">
-        <img width="40" height="40" class="w-10" src="<?php echo bloginfo('template_url') . '/assets/images/facebook.webp' ?>" alt="facebook">
+        <img width="40" height="40" class="lazy w-10" data-src="<?php echo bloginfo('template_url') . '/assets/images/facebook.webp' ?>" alt="facebook">
       </a>
       <a class="opacity-50 hover:opacity-100 transition-opacity" href="<?php the_field('twitter_link'); ?>" target="_blank" rel="noreferrer">
-        <img width="40" height="40" class="w-10" src="<?php echo bloginfo('template_url') . '/assets/images/twitter.webp' ?>" alt="twitter">
+        <img width="40" height="40" class="lazy w-10" data-src="<?php echo bloginfo('template_url') . '/assets/images/twitter.webp' ?>" alt="twitter">
       </a>
     </div>
   </div>

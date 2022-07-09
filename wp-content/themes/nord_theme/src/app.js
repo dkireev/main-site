@@ -1,9 +1,7 @@
 import Swiper, { Pagination, Autoplay } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/autoplay";
+import LazyLoad from "vanilla-lazyload";
 
-export const swiper = new Swiper(".swiper-general", {
+new Swiper(".swiper-general", {
   modules: [Pagination, Autoplay],
   speed: 400,
   spaceBetween: 16,
@@ -21,7 +19,7 @@ export const swiper = new Swiper(".swiper-general", {
   centerInsufficientSlides: true,
 });
 
-export const swiperTestimonials = new Swiper(".swiper-testimonials", {
+new Swiper(".swiper-testimonials", {
   modules: [Pagination, Autoplay],
   speed: 400,
   spaceBetween: 16,
@@ -35,3 +33,7 @@ export const swiperTestimonials = new Swiper(".swiper-testimonials", {
   },
   centerInsufficientSlides: true,
 });
+
+const lazyLoadInstance = new LazyLoad();
+
+lazyLoadInstance.update();
