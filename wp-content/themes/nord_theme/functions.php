@@ -13,7 +13,7 @@ function dk_register_styles($version)
 {
   wp_enqueue_style('dk-general', get_template_directory_uri() . "/style.css", array(), $version, 'all');
   wp_enqueue_style('dk-main', get_template_directory_uri() . "/assets/main.css", array(), $version, 'all');
-  wp_enqueue_style('dk-swiper', "https://unpkg.com/swiper@8/swiper-bundle.min.css", array(), null, 'all');
+  wp_enqueue_style('dk-swiper', "https://unpkg.com/swiper@8.3.0/swiper-bundle.min.css", array(), null, 'all');
 }
 add_action('wp_enqueue_scripts', 'dk_register_styles');
 
@@ -23,11 +23,16 @@ function dk_register_scripts($version)
 }
 add_action('wp_enqueue_scripts', 'dk_register_scripts');
 
-function dk_remove_block_library()
+function dk_dequeue_styles()
 {
   wp_dequeue_style("wp-block-library");
+  wp_dequeue_style('global-styles');
 }
-add_action('wp_enqueue_scripts', 'dk_remove_block_library');
+add_action('wp_enqueue_scripts', 'dk_dequeue_styles');
+
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+
 ?>
 
 <?php

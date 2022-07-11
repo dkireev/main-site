@@ -18,7 +18,6 @@ new Swiper(".swiper-general", {
   },
   centerInsufficientSlides: true,
 });
-
 new Swiper(".swiper-testimonials", {
   modules: [Pagination, Autoplay],
   speed: 400,
@@ -35,5 +34,4 @@ new Swiper(".swiper-testimonials", {
 });
 
 const lazyLoadInstance = new LazyLoad();
-
 lazyLoadInstance.update();
