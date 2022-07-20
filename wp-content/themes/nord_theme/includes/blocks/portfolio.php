@@ -20,9 +20,9 @@
                   <div class="lazy h-full bg-no-repeat bg-cover bg-center md:hover:scale-105 transition-transform" data-bg="<?php the_post_thumbnail_url(); ?>">
                   </div>
                 </div>
-                <p class="text-center md:text-start text-2xl font-semibold">
+                <h3 class="text-center md:text-start text-2xl font-semibold">
                   <?php the_title(); ?>
-                </p>
+                </h3>
               </div>
             </div>
           <?php endwhile; ?>

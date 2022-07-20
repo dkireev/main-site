@@ -16,7 +16,7 @@
           <?php while ($dk_get_posts->have_posts()) : $dk_get_posts->the_post(); ?>
             <div class="swiper-slide">
               <div class="max-w-2xl mx-auto flex flex-col items-center gap-5 md:gap-10 2xl:gap-20 mb-10 2xl:mb-20">
-                <img width="128" height="128" class="lazy w-16 md:w-32" data-src="<?php echo bloginfo('template_url') . '/assets/images/quotes.webp' ?>" alt />
+                <img width="128" height="128" class="lazy w-16 md:w-32" data-src="<?php echo bloginfo('template_url') . '/assets/images/quotes.webp' ?>" alt="" />
                 <p class="max-h-64 overflow-hidden text-ellipsis text-center text-xl md:text-2xl">
                   <i class="block">
                     <?php echo wp_strip_all_tags(get_the_content()); ?>

@@ -1853,9 +1853,9 @@ function _custom_background_cb() {
 	}
 	?>
 <style<?php echo $type_attr; ?> id="custom-background-css">
-  body.custom-background { <?php echo trim( $style ); ?> }
-  </style>
-  <?php
+body.custom-background { <?php echo trim( $style ); ?> }
+</style>
+	<?php
 }
 
 /**
@@ -1868,13 +1868,13 @@ function wp_custom_css_cb() {
 	if ( $styles || is_customize_preview() ) :
 		$type_attr = current_theme_supports( 'html5', 'style' ) ? '' : ' type="text/css"';
 		?>
-  <style<?php echo $type_attr; ?> id="wp-custom-css">
-    <?php
+		<style<?php echo $type_attr; ?> id="wp-custom-css">
+			<?php
 			// Note that esc_html() cannot be used because `div &gt; span` is not interpreted properly.
 			echo strip_tags( $styles );
 			?>
-    </style>
-    <?php
+		</style>
+		<?php
 	endif;
 }
 
@@ -2877,16 +2877,14 @@ function _custom_logo_header_styles() {
 
 		$type_attr = current_theme_supports( 'html5', 'style' ) ? '' : ' type="text/css"';
 		?>
-    <!-- Custom Logo: hide header text -->
-    <style id="custom-logo-css" <?php echo $type_attr; ?>>
-    <?php echo $classes;
-
-    ?> {
-      position: absolute;
-      clip: rect(1px, 1px, 1px, 1px);
-    }
-    </style>
-    <?php
+		<!-- Custom Logo: hide header text -->
+		<style id="custom-logo-css"<?php echo $type_attr; ?>>
+			<?php echo $classes; ?> {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+		</style>
+		<?php
 	}
 }
 
@@ -3671,23 +3669,22 @@ function wp_customize_support_script() {
 	$cross_domain = ( strtolower( $admin_origin['host'] ) != strtolower( $home_origin['host'] ) );
 	$type_attr    = current_theme_supports( 'html5', 'script' ) ? '' : ' type="text/javascript"';
 	?>
-    <script<?php echo $type_attr; ?>>
-      (function() {
-      var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new
-      RegExp('(^|\\s+)(no-)?'+cs+'(\\s+|$)');
+	<script<?php echo $type_attr; ?>>
+		(function() {
+			var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new RegExp('(^|\\s+)(no-)?'+cs+'(\\s+|$)');
 
-      <?php	if ( $cross_domain ) : ?>
-      request = (function(){ var xhr = new XMLHttpRequest(); return ('withCredentials' in xhr); })();
-      <?php	else : ?>
-      request = true;
-      <?php	endif; ?>
+	<?php	if ( $cross_domain ) : ?>
+			request = (function(){ var xhr = new XMLHttpRequest(); return ('withCredentials' in xhr); })();
+	<?php	else : ?>
+			request = true;
+	<?php	endif; ?>
 
-      b[c] = b[c].replace( rcs, ' ' );
-      // The customizer requires postMessage and CORS (if the site is cross domain).
-      b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
-      }());
-      </script>
-      <?php
+			b[c] = b[c].replace( rcs, ' ' );
+			// The customizer requires postMessage and CORS (if the site is cross domain).
+			b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
+		}());
+	</script>
+	<?php
 }
 
 /**
@@ -3804,6 +3801,7 @@ function _wp_keep_alive_customize_changeset_dependent_auto_drafts( $new_status, 
  * See {@see 'setup_theme'}.
  *
  * @since 5.5.0
+ * @since 6.1.0 The `block-templates` feature was added.
  */
 function create_initial_theme_features() {
 	register_theme_feature(
@@ -3817,6 +3815,13 @@ function create_initial_theme_features() {
 		'automatic-feed-links',
 		array(
 			'description'  => __( 'Whether posts and comments RSS feed links are added to head.' ),
+			'show_in_rest' => true,
+		)
+	);
+	register_theme_feature(
+		'block-templates',
+		array(
+			'description'  => __( 'Whether a theme uses block-based templates.' ),
 			'show_in_rest' => true,
 		)
 	);

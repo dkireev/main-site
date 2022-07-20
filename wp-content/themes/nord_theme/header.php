@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="<?php the_field('services_description') ?>">
   <?php wp_head() ?>
 </head>
 
@@ -18,7 +19,7 @@
           $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
         }
         ?>
-        <img width="143" height="40" class="h-10 w-auto" src="<?php echo $logo[0] ?>" alt="logo" />
+        <img width="143" height="40" class="h-10 w-auto" src="<?php echo $logo[0] ?>" alt="<?php bloginfo("name") ?>" />
       </a>
       <?php $outline = true;
       include(get_theme_file_path() . "/includes/components/button.php") ?>
