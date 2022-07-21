@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="<?php the_field('services_description') ?>">
+  <meta name="description" content="<?php the_field('services_description', 36) ?>">
   <?php wp_head() ?>
 </head>
 
@@ -21,8 +21,7 @@
         ?>
         <img width="143" height="40" class="h-10 w-auto" src="<?php echo $logo[0] ?>" alt="<?php bloginfo("name") ?>" />
       </a>
-      <?php $outline = true;
-      include(get_theme_file_path() . "/includes/components/button.php") ?>
+      <?php echo do_shortcode("[button type='outline' label='Contact us' link='/contact-us']"); ?>
     </div>
   </header>
-  <main class="flex flex-col grow">
+  <main class="flex flex-col grow mt-[4.375rem]">

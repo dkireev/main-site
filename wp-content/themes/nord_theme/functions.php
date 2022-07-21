@@ -11,42 +11,6 @@ function dk_add_theme_support()
 }
 add_action('after_setup_theme', 'dk_add_theme_support');
 
-function dk_timeline_shortcode($type)
-{
-  extract(shortcode_atts(array(
-    'type' => 'type'
-  ), $type));
-  $start_date = strtotime(get_field('date_of_start', 36));
-  $start_year = date('Y', $start_date);
-  $current_date = time();
-  $current_year = date('Y', $current_date);
-  $diff = $current_date - $start_date;
-  $experience = round($diff / (60 * 60 * 24 * 30 * 12));
-  $clients = round($diff / (60 * 60 * 24 * 30 * 3));
-  $projects = round($diff / (60 * 60 * 24 * 30 * 2));
-  switch ($type) {
-    case "start_year":
-      return $start_year;
-      break;
-    case "current_year":
-      return $current_year;
-      break;
-    case "experience":
-      return $experience;
-      break;
-    case "clients":
-      return $clients;
-      break;
-    case "projects":
-      return $projects;
-      break;
-    default:
-      return "";
-      break;
-  }
-}
-add_shortcode('timeline', 'dk_timeline_shortcode');
-
 $version = wp_get_theme()->get('Version');
 
 function dk_register_styles($version)
@@ -72,3 +36,55 @@ add_action('wp_enqueue_scripts', 'dk_dequeue_styles');
 
 remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
+
+function dk_timeline_shortcode($atts)
+{
+  extract(shortcode_atts(array(
+    'type' => 'type'
+  ), $atts));
+  $start_date = strtotime(get_field('date_of_start', 36));
+  $start_year = date('Y', $start_date);
+  $current_date = time();
+  $current_year = date('Y', $current_date);
+  $diff = $current_date - $start_date;
+  $diff_months = $diff / (60 * 60 * 24 * 30);
+  $experience = round($diff_months / 12);
+  $clients = round($diff_months / 3);
+  $projects = round($diff_months / 2);
+  switch ($type) {
+    case "start_year":
+      return $start_year;
+      break;
+    case "current_year":
+      return $current_year;
+      break;
+    case "experience":
+      return $experience;
+      break;
+    case "clients":
+      return $clients;
+      break;
+    case "projects":
+      return $projects;
+      break;
+    default:
+      return "";
+      break;
+  }
+}
+add_shortcode('timeline', 'dk_timeline_shortcode');
+
+function dk_button_shortcode($atts)
+{
+  extract(shortcode_atts(array(
+    'type' => '',
+    'link' => '/',
+    'label' => '',
+    'external' => false
+  ), $atts));
+  $class = $type === 'outline' ? "text-accent hover:text-lime-600 hover:bg-lime-600/10" : "text-white bg-accent hover:bg-lime-600";
+  $external ? 'target="_blank" rel="noreferrer"' : '';
+  $button = "<a href='$link' $external role='button' class='block py-3 px-6 rounded-md $class active:scale-95 transition text-sm font-semibold tracking-wider uppercase text-center border border-accent hover:border-lime-600'>$label</a>";
+  return $button;
+}
+add_shortcode('button', 'dk_button_shortcode');

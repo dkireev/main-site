@@ -1,6 +1,8 @@
 <?php
 /*
-Template Name: Portfolio Page
+Template Name: Secondary Page
 */
 ?>
+<?php get_header(); ?>
 <?php the_content(); ?>
+<?php get_footer(); ?>
